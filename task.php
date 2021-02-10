@@ -5,8 +5,10 @@ print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
+$names[] = "斎藤";
+print_r($names) .PHP_EOL;
 
-echo PHP_EOL;
+
 
 print("#####q2#####".PHP_EOL);
 $array1 = ["dog", "cat", "fish"];
