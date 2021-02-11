@@ -1,10 +1,11 @@
 <?PHP
-$programming_languages = ["php","ruby","python","javascript"];
+$numbers1 = [1, 2, 3, 4, 5];
 
-# コードを追加
-$upper_case_programming_languages = array_map('strtoupper', $programming_languages);
-# 以下は変更しないで下さい
-print_r($programming_languages);
-echo PHP_EOL;
-print_r($upper_case_programming_languages);
+  # 以下に回答を記載
+  $numbers2 = [];
+  foreach($numbers1 as $value){
+  $numbers2[] = $value * 10 ;
+}
+
+print_r($numbers2);
 ?>
