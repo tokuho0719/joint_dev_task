@@ -1,11 +1,8 @@
 <?PHP
-$numbers1 = [1, 2, 3, 4, 5];
+$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
 
-  # 以下に回答を記載
-  $numbers2 = [];
-  foreach($numbers1 as $value){
-  $numbers2[] = $value * 10 ;
+$data1 = [];
+foreach($data as $key){
+  $data1 = 
 }
-
-print_r($numbers2);
 ?>
