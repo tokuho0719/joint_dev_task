@@ -1,8 +1,14 @@
 <?PHP
-$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+$foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼"];
 
-$data1 = [];
-foreach($data as $key){
-  $data1 = 
+# 以下に回答を記載
+foreach ($foods as $value) {
+  if (preg_match('/うに/' , $value)) {
+    echo "好物です" . PHP_EOL;
+  } else {
+    echo "まぁまぁ好きです" . PHP_EOL;
+  }
 }
+
+echo PHP_EOL;
 ?>
