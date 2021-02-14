@@ -174,53 +174,53 @@ $user_data = array_merge($user_data, $update_data);
 print_r($user_data);
 echo PHP_EOL;
 
-// print("#####q14#####" . PHP_EOL);
-// $data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
+print("#####q14#####" . PHP_EOL);
+$data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 
-// # 以下に回答を記載
-// $data1 = [];
-// foreach ($data as $key) {
-//   array_push($data1, $key);
-// }
-// print_r($data1);
+# 以下に回答を記載
+$data1 = [];
+foreach ($data as $key) {
+  array_push($data1, $key);
+}
+print_r($data1);
 
-// echo PHP_EOL;
+echo PHP_EOL;
 
-// print("#####q15#####" . PHP_EOL);
-// $data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
-// $data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
+print("#####q15#####" . PHP_EOL);
+$data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
+$data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
 
-// # 以下に回答を記載
-// if (array_key_exists('age', $data1)) {
-//   print('OK' . PHP_EOL);
-// } else {
-//   print('NG' . PHP_EOL);
-// }
+# 以下に回答を記載
+if (array_key_exists('age', $data1)) {
+  print('OK' . PHP_EOL);
+} else {
+  print('NG' . PHP_EOL);
+}
 
-// if (array_key_exists('age', $data2)) {
-//   print('OK' . PHP_EOL);
-// } else {
-//   print('NG' . PHP_EOL);
-// }
+if (array_key_exists('age', $data2)) {
+  print('OK' . PHP_EOL);
+} else {
+  print('NG' . PHP_EOL);
+}
 
 
 
-// echo PHP_EOL;
+echo PHP_EOL;
 
-// print("#####q16#####" . PHP_EOL);
-// $users = [
-//   ["name" => "satou", "age" => 22],
-//   ["name" => "yamada", "age" => 12],
-//   ["name" => "takahashi", "age" => 32],
-//   ["name" => "nakamura", "age" => 41]
-// ];
+print("#####q16#####" . PHP_EOL);
+$users = [
+  ["name" => "satou", "age" => 22],
+  ["name" => "yamada", "age" => 12],
+  ["name" => "takahashi", "age" => 32],
+  ["name" => "nakamura", "age" => 41]
+];
 
-// # 以下に回答を記載
-// foreach ($users as $key => $value) {
-//   echo "私の名前は" . $value["name"] . "です。年齢は" . $value["age"] . "歳です。" . PHP_EOL;
-// }
+# 以下に回答を記載
+foreach ($users as $key => $value) {
+  echo "私の名前は" . $value["name"] . "です。年齢は" . $value["age"] . "歳です。" . PHP_EOL;
+}
 
-// echo PHP_EOL;
+echo PHP_EOL;
 
 // print("#####q17#####" . PHP_EOL);
 // class User
