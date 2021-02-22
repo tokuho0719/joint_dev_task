@@ -222,34 +222,65 @@ foreach ($users as $key => $value) {
 
 echo PHP_EOL;
 
-// print("#####q17#####" . PHP_EOL);
-// class User
-// {
+print("#####q17#####" . PHP_EOL);
+class User
+{
+  private $name;
+  private $age;
+  private $sex;
 
-//   # コードを追加
+  public function __construct($name,$age,$sex){
+    $this->name = $name;
+    $this->age = $age;
+    $this->sex = $sex;
+  }
 
-// }
+  public function info(){
+    echo "名前：". $this->name . PHP_EOL;
+    echo "年齢：". $this->age . PHP_EOL;
+    echo "性別：". $this->sex . PHP_EOL;
+  }
 
-// $user1 = new User("神里", 32, "男");
-// $user2 = new User("あじー", 32, "男");
+}
 
-// $user1->info();
-// print("-------------" . PHP_EOL);
-// $user2->info();
+$user1 = new User("神里", 32, "男");
+$user2 = new User("あじー", 32, "男");
 
-// echo PHP_EOL;
+$user1->info();
+print("-------------" . PHP_EOL);
+$user2->info();
 
-// print("#####q18#####" . PHP_EOL);
+echo PHP_EOL;
 
-// # コードを追加
+print("#####q18#####" . PHP_EOL);
 
-// $man1 = new Man("あじー", 32);
-// $man2 = new Man("ゆたぼん", 10);
+# コードを追加
+class Man {
+  private $name;
+  private $age;
 
-// $man1->introduce();
-// $man2->introduce();
+  public function __construct($name,$age)
+  {
+    $this->name = $name;
+    $this->age = $age;
+  }
 
-// echo PHP_EOL;
+  public function introduce(){
+    if($this->age > 20){
+      echo "こんにちは，" . $this->name . "と申します。宜しくお願いいたします。" . PHP_EOL;
+    }else{
+      echo "はいさいまいど〜，" . $this->name . "です！！！" . PHP_EOL;
+    }
+  }
+}
+
+$man1 = new Man("あじー", 32);
+$man2 = new Man("ゆたぼん", 10);
+
+$man1->introduce();
+$man2->introduce();
+
+echo PHP_EOL;
 
 // print("#####q19#####" . PHP_EOL);
 // class Item
