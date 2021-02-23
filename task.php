@@ -229,18 +229,19 @@ class User
   private $age;
   private $sex;
 
-  public function __construct($name,$age,$sex){
+  public function __construct($name, $age, $sex)
+  {
     $this->name = $name;
     $this->age = $age;
     $this->sex = $sex;
   }
 
-  public function info(){
-    echo "名前：". $this->name . PHP_EOL;
-    echo "年齢：". $this->age . PHP_EOL;
-    echo "性別：". $this->sex . PHP_EOL;
+  public function info()
+  {
+    echo "名前：" . $this->name . PHP_EOL;
+    echo "年齢：" . $this->age . PHP_EOL;
+    echo "性別：" . $this->sex . PHP_EOL;
   }
-
 }
 
 $user1 = new User("神里", 32, "男");
@@ -255,20 +256,22 @@ echo PHP_EOL;
 print("#####q18#####" . PHP_EOL);
 
 # コードを追加
-class Man {
+class Man
+{
   private $name;
   private $age;
 
-  public function __construct($name,$age)
+  public function __construct($name, $age)
   {
     $this->name = $name;
     $this->age = $age;
   }
 
-  public function introduce(){
-    if($this->age > 20){
+  public function introduce()
+  {
+    if ($this->age > 20) {
       echo "こんにちは，" . $this->name . "と申します。宜しくお願いいたします。" . PHP_EOL;
-    }else{
+    } else {
       echo "はいさいまいど〜，" . $this->name . "です！！！" . PHP_EOL;
     }
   }
@@ -287,7 +290,7 @@ class Item
 {
   # 以下を修正して下さい
 
-public $name;
+  public $name;
 
   function __construct($book_name)
   {
@@ -307,12 +310,11 @@ class Human
   public $name;
   public $age;
 
-  public function __construct($name,$age)
+  public function __construct($name, $age)
   {
     $this->name = $name;
     $this->age = $age;
   }
-
 }
 
 class Zoo
@@ -320,24 +322,24 @@ class Zoo
   public $zoo_name;
   public $entrance_fee;
 
-  public function __construct($zoo_name,$entrance_fee)
+  public function __construct($zoo_name, $entrance_fee)
   {
     $this->zoo_name = $zoo_name;
     $this->entrance_fee = $entrance_fee;
   }
 
-  public function info_entrance_fee(Human $human){
-    if($human->age <= 5){
+  public function info_entrance_fee(Human $human)
+  {
+    if ($human->age <= 5) {
       echo $human->name . "さんの入場料金は" . $this->entrance_fee["infant"] . "円です。" . PHP_EOL;
-    }elseif($human->age <= 12){
-      echo $human->name . "さんの入場料金は" . $this->entrance_fee["children"] . "円です。". PHP_EOL;
-    }elseif($human->age <= 64){
-      echo $human->name . "さんの入場料金は" . $this->entrance_fee["adult"] . "円です。". PHP_EOL;
-    }elseif($human->age <= 120){
-      echo $human->name . "さんの入場料金は" . $this->entrance_fee["senior"] . "円です。". PHP_EOL;
+    } elseif ($human->age <= 12) {
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["children"] . "円です。" . PHP_EOL;
+    } elseif ($human->age <= 64) {
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["adult"] . "円です。" . PHP_EOL;
+    } elseif ($human->age <= 120) {
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["senior"] . "円です。" . PHP_EOL;
     }
   }
-
 }
 
 $zoo = new Zoo("旭山動物園", ["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
