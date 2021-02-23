@@ -282,53 +282,77 @@ $man2->introduce();
 
 echo PHP_EOL;
 
-// print("#####q19#####" . PHP_EOL);
-// class Item
-// {
-//   # 以下を修正して下さい
+print("#####q19#####" . PHP_EOL);
+class Item
+{
+  # 以下を修正して下さい
 
-//   protected $name;
+public $name;
 
-//   function __construct($book_name)
-//   {
-//     $this->name = $book_name;
-//   }
-// }
-// # 以下は変更しないで下さい
+  function __construct($book_name)
+  {
+    $this->name = $book_name;
+  }
+}
+# 以下は変更しないで下さい
 
-// $book = new Item("ゼロ秒思考");
-// print($book->name . PHP_EOL);
+$book = new Item("ゼロ秒思考");
+print($book->name . PHP_EOL);
 
-// echo PHP_EOL;
+echo PHP_EOL;
 
-// print("#####q20#####" . PHP_EOL);
-// class Human
-// {
+print("#####q20#####" . PHP_EOL);
+class Human
+{
+  public $name;
+  public $age;
 
-//   # コードを追加
+  public function __construct($name,$age)
+  {
+    $this->name = $name;
+    $this->age = $age;
+  }
 
-// }
+}
 
-// class Zoo
-// {
+class Zoo
+{
+  public $zoo_name;
+  public $entrance_fee;
 
-//   # コードを追加
+  public function __construct($zoo_name,$entrance_fee)
+  {
+    $this->zoo_name = $zoo_name;
+    $this->entrance_fee = $entrance_fee;
+  }
 
-// }
+  public function info_entrance_fee(Human $human){
+    if($human->age <= 5){
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["infant"] . "円です。" . PHP_EOL;
+    }elseif($human->age <= 12){
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["children"] . "円です。". PHP_EOL;
+    }elseif($human->age <= 64){
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["adult"] . "円です。". PHP_EOL;
+    }elseif($human->age <= 120){
+      echo $human->name . "さんの入場料金は" . $this->entrance_fee["senior"] . "円です。". PHP_EOL;
+    }
+  }
 
-// $zoo = new Zoo("旭山動物園", ["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
+}
 
-// $human1 = new Human("たま", 3);
-// $human2 = new Human("ゆたぼん", 10);
-// $human3 = new Human("あじー", 32);
-// $human4 = new Human("ぎん", 108);
+$zoo = new Zoo("旭山動物園", ["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-// $humans = [$human1, $human2, $human3, $human4];
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
 
-// foreach ($humans as $human) {
-//   $zoo->info_entry_fee($human);
-// }
+$humans = [$human1, $human2, $human3, $human4];
 
-// echo PHP_EOL;
+foreach ($humans as $human) {
+  $zoo->info_entrance_fee($human);
+}
+
+echo PHP_EOL;
 
 ?>
