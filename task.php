@@ -358,10 +358,10 @@ foreach ($humans as $human) {
 echo PHP_EOL;
 
 for($i = 1; $i <=30; $i++){
-  if($i === 15){
-    echo 'FizzBuzz' . PHP_EOL;
-  }elseif($i === 21){
+  if(($i % 3 === 0) && ($i % 7 === 0)){
     echo 'FizzHoge' . PHP_EOL;
+  }elseif(($i % 3 === 0) && ($i % 5 === 0)){
+    echo 'FizzBuzz' . PHP_EOL;
   }elseif($i % 3 === 0){
     echo 'Fizz' . PHP_EOL;
   }elseif($i % 5 === 0){
